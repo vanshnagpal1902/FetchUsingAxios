@@ -1,0 +1,20 @@
+.row {
+    display:flex;
+    background-color: red;;
+}
+.card{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    width:260px;
+    height:200px;
+    margin :40px;
+
+}
+.title{
+    margin-top: 20px;
+    background-color: bisque;
+    text-align: center;
+}
+.price{
+    background-color: aquamarine;
+    text-align: center;
+}
