@@ -1,0 +1,50 @@
+.card {
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: white;
+  width: 18rem; /* Initial width */
+  margin: 0.5rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15); /* Shadow for depth effect */
+}
+
+.card-img-top {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  height: 200px; /* Adjust as needed */
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.card-text {
+  font-size: 1rem;
+  color: #6c757d;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.btn-group {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem; /* Adjust spacing */
+}
+
+.btn-primary {
+  margin-right: 0.5rem;
+  margin-bottom: 10px;
+}
+
+.btn-warning {
+  margin-left: 0.5rem;
+}

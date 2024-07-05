@@ -10,23 +10,23 @@ import { useState } from 'react';
 
 
 function App() {
-  const [bag, setBag] = useState([]); 
+  // const [bag, setBag] = useState([]); 
   
-  function HandlerRemove(idd)
-  {
-    const filtered=bag.filter(ele=>ele.id!==idd);
-    console.log(filtered);
-    setBag(filtered);
-  }
-  function HandlerAddtoBag(item)
-    {
-            setBag([...bag, item]);
+  // function HandlerRemove(idd)
+  // {
+  //   const filtered=bag.filter(ele=>ele.id!==idd);
+  //   console.log(filtered);
+  //   setBag(filtered);
+  // }
+  // function HandlerAddtoBag(item)
+  //   {
+  //           setBag([...bag, item]);
 
-            console.log(bag);
-    }
+  //           console.log(bag);
+  //   }
   return (
 <>
- <div className='row'>
+ {/* <div className='row'>
   {
     bag.map(item=>(
       <div className='card'>
@@ -38,10 +38,10 @@ function App() {
 </div>
 <div className='row'>
   <NewCompo  myfunction={HandlerAddtoBag}/>
-</div> 
+</div>  */}
 {/* <Useeffect/> */}
 
-
+<Fetchingusingaxios/>
 
 </>
   );
