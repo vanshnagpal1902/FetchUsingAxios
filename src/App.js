@@ -1,11 +1,11 @@
-import logo from './logo.svg';
-// import './App.css';
-import Useeffect from './fetch/Useeffect';
-import FetchingExample from './fetch/FetchingExample';
-import FetchingCards from './fetch/FetchingCards';
-import Fetchingcardsasyncawait from './fetch/Fetchingcardsasyncawait';
+// import logo from './logo.svg';
+// // import './App.css';
+// import Useeffect from './fetch/Useeffect';
+// import FetchingExample from './fetch/FetchingExample';
+// import FetchingCards from './fetch/FetchingCards';
+// import Fetchingcardsasyncawait from './fetch/Fetchingcardsasyncawait';
 import Fetchingusingaxios from './fetch/Fetchingusingaxios';
-import NewCompo from './fetch/NewCompo';
+// import NewCompo from './fetch/NewCompo';
 import { useState } from 'react';
 
 

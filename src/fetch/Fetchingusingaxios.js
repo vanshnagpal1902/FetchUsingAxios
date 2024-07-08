@@ -1,34 +1,37 @@
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 import Cards from './Cards';
-import { useState, useEffect } from "react";
-import axios from 'axios'; // Import Axios
 
-function Fetchingcardsasyncawait() {
-    const [users, setUsers] = useState([]);
+function Fetchingusingaxios() {
+  const [products, setProducts] = useState([]);
 
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        console.log('Starting fetch...'); // Log before making the request
+        const res = await axios.get("https://dummyjson.com/products");
+        console.log('API response:', res); // Log the full response
+        setProducts(res.data.products);
+        console.log('Fetched products:', res.data.products);
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    };
 
-    useEffect(() => {
-        const fetchData = async () => {
-            const res= await axios.get("https://dummyjson.com/products");{/*axios .get by default hota hai baki put delete update post */}
-            //const d = response.json();
+    fetchData();
+  }, []);
 
-            setUsers(res.data.products);
-            console.log(res.data.products);
-        };
-
-        fetchData();
-    }, []); 
-
-    return (
-        <>
-            <div className="row m-24">
-                {
-                    users.map((prod) => (
-                        <Cards key={prod.id} payload={prod}/> // It's important to use a key prop when mapping over an array
-                    ))
-                }
-            </div>
-        </>
-    );
+  return (
+    <div className="row m-24">
+      {products.length > 0 ? (
+        products.map((prod) => (
+          <Cards key={prod.id} payload={prod} />
+        ))
+      ) : (
+        <p>No products available</p>
+      )}
+    </div>
+  );
 }
 
-export default Fetchingcardsasyncawait;
+export default Fetchingusingaxios;
